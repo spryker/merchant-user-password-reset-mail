@@ -18,25 +18,16 @@ use Spryker\Zed\MerchantUserPasswordResetMail\MerchantUserPasswordResetMailDepen
  */
 class MerchantUserPasswordResetMailCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\MerchantUserPasswordResetMail\Dependency\Facade\MerchantUserPasswordResetMailToMailFacadeInterface
-     */
     public function getMailFacade(): MerchantUserPasswordResetMailToMailFacadeInterface
     {
         return $this->getProvidedDependency(MerchantUserPasswordResetMailDependencyProvider::FACADE_MAIL);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantUserPasswordResetMail\Dependency\Facade\MerchantUserPasswordResetMailToMerchantUserFacadeInterface
-     */
     public function getMerchantUserFacade(): MerchantUserPasswordResetMailToMerchantUserFacadeInterface
     {
         return $this->getProvidedDependency(MerchantUserPasswordResetMailDependencyProvider::FACADE_MERCHANT_USER);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantUserPasswordResetMail\Dependency\Facade\MerchantUserPasswordResetMailToStoreFacadeInterface
-     */
     public function getStoreFacade(): MerchantUserPasswordResetMailToStoreFacadeInterface
     {
         return $this->getProvidedDependency(MerchantUserPasswordResetMailDependencyProvider::FACADE_STORE);

@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\MerchantUserTransfer;
 
 interface MerchantUserPasswordResetMailToMerchantUserFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantUserCriteriaTransfer $merchantUserCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantUserTransfer|null
-     */
     public function findMerchantUser(MerchantUserCriteriaTransfer $merchantUserCriteriaTransfer): ?MerchantUserTransfer;
 }

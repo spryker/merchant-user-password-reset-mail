@@ -33,11 +33,6 @@ class MerchantUserPasswordResetMailDependencyProvider extends AbstractBundleDepe
      */
     public const FACADE_STORE = 'FACADE_STORE';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -49,11 +44,6 @@ class MerchantUserPasswordResetMailDependencyProvider extends AbstractBundleDepe
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMailFacade(Container $container): Container
     {
         $container->set(static::FACADE_MAIL, function (Container $container) {
@@ -65,11 +55,6 @@ class MerchantUserPasswordResetMailDependencyProvider extends AbstractBundleDepe
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT_USER, function (Container $container) {
@@ -81,11 +66,6 @@ class MerchantUserPasswordResetMailDependencyProvider extends AbstractBundleDepe
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addStoreFacade(Container $container): Container
     {
         $container->set(static::FACADE_STORE, $container->factory(function (Container $container) {

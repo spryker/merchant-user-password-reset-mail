@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Spryker Marketplace License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\Zed\MerchantUserPasswordResetMail\Communication\UserPasswordReset;
+namespace SprykerTest\Zed\MerchantUserPasswordResetMail\Communication\MerchantUserPasswordReset;
 
 use Codeception\Test\Unit;
 use Generated\Shared\Transfer\UserPasswordResetRequestTransfer;
@@ -22,7 +22,7 @@ use Spryker\Zed\MerchantUserPasswordResetMail\MerchantUserPasswordResetMailDepen
  * @group Zed
  * @group MerchantUserPasswordResetMail
  * @group Communication
- * @group UserPasswordReset
+ * @group MerchantUserPasswordReset
  * @group MailMerchantUserPasswordResetRequestStrategyPluginTest
  * Add your own group annotations below this line
  */
@@ -38,9 +38,6 @@ class MailMerchantUserPasswordResetRequestStrategyPluginTest extends Unit
      */
     protected ?MerchantUserPasswordResetMailToStoreFacadeInterface $storeFacadeMock;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -53,9 +50,6 @@ class MailMerchantUserPasswordResetRequestStrategyPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testMailMerchantUserPasswordResetRequestStrategyPluginCallsMailFacade(): void
     {
         // Arrange
@@ -75,9 +69,6 @@ class MailMerchantUserPasswordResetRequestStrategyPluginTest extends Unit
         $mailMerchantUserPasswordResetPlugin->handleUserPasswordResetRequest($userPasswordResetRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testHandleUserPasswordResetRequestCallsStoreFacade(): void
     {
         // Arrange
@@ -96,9 +87,6 @@ class MailMerchantUserPasswordResetRequestStrategyPluginTest extends Unit
         $mailMerchantUserPasswordResetPlugin->handleUserPasswordResetRequest($userPasswordResetRequestTransfer);
     }
 
-    /**
-     * @return \Spryker\Zed\Mail\Business\MailFacadeInterface
-     */
     protected function createMailFacadeMock(): MailFacadeInterface
     {
         /** @var \Spryker\Zed\Mail\Business\MailFacadeInterface $mailFacade */
